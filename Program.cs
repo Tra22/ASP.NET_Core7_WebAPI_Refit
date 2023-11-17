@@ -41,13 +41,13 @@ builder.Services.AddSwaggerGen(options =>
     // Add a custom operation filter which sets default values
     options.OperationFilter<SwaggerDefaultValues>();
 });
-
+string FakeAPIUrl = builder.Configuration["FakeAPI:URL"] ?? string.Empty;
 //add Refit for User Fake API
-builder.Services.AddScoped<IUsersApiClientService>(x => RestService.For<IUsersApiClientService>(builder.Configuration["FakeAPI_URL"]??string.Empty));
+builder.Services.AddScoped<IUsersApiClientService>(x => RestService.For<IUsersApiClientService>(FakeAPIUrl));
 //add Regit for Product Fake API
-builder.Services.AddScoped<IProductsApiClientService>(x => RestService.For<IProductsApiClientService>(builder.Configuration["FakeAPI_URL"]??string.Empty));
+builder.Services.AddScoped<IProductsApiClientService>(x => RestService.For<IProductsApiClientService>(FakeAPIUrl));
 //add Regit for Cart Fake API
-builder.Services.AddScoped<ICartsApiClientService>(x => RestService.For<ICartsApiClientService>(builder.Configuration["FakeAPI_URL"]??string.Empty));
+builder.Services.AddScoped<ICartsApiClientService>(x => RestService.For<ICartsApiClientService>(FakeAPIUrl));
 
 
 
