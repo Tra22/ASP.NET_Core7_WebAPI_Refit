@@ -11,8 +11,7 @@ These instructions will get you to setup the project, install sdk and add packag
 
 ### Prerequisites
 - Visual Studio 2022 or higher 
-- .NET 7.x SDK  
-- Npgsql.EntityFrameworkCore.PostgreSQL 7.0.11 (https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/)
+- .NET 7.x SDK
 
 ### Installing
 1.  Install .net SDK 7<br>
