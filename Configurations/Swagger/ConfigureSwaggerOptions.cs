@@ -14,10 +14,6 @@ namespace ASP.NET_Core7_WebAPI_Refit.Configurations.Swagger {
             foreach (var description in _provider.ApiVersionDescriptions)
             {
                 options.SwaggerDoc(description.GroupName, CreateInfoForApiVersion(description));
-                options.AddSecurityDefinition(
-                        description.GroupName,
-                        CreateSecurityScheme());
-                options.AddSecurityRequirement(CreateSecurityRequirement(description.GroupName));
             }
         }
 
@@ -38,37 +34,6 @@ namespace ASP.NET_Core7_WebAPI_Refit.Configurations.Swagger {
             }
 
             return info;
-        }
-        private OpenApiSecurityScheme CreateSecurityScheme()
-        {
-            var securityScheme = new OpenApiSecurityScheme()
-            {
-                Name = "Authorization",
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "Bearer",
-                BearerFormat = "JWT",
-                In = ParameterLocation.Header,
-                Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer token\"",
-            };
-            return securityScheme;
-        }
-
-        private OpenApiSecurityRequirement CreateSecurityRequirement(string groupName)
-        {
-            var securityRequirement = new OpenApiSecurityRequirement()
-            {
-                {
-                    new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                                        {
-                                            Type = ReferenceType.SecurityScheme, 
-                                            Id = groupName}
-                                        }, new string[] {}
-                        }
-                 };
-
-            return securityRequirement;
         }
     }
 }

@@ -17,27 +17,27 @@ namespace ASP.NET_CORE7_API_OAUTH2_RESOURCE.Controllers {
     
         [HttpGet]
         public async Task<Response<IEnumerable<ProductDto>>> GetAllProductsQueryParam([FromQuery] QueryParam queryParam){
-            return new Response<IEnumerable<ProductDto>>() { Message= "Successfully fetch users by query.", Data= await _productApiClient.GetAllProductsQuery(queryParam) };
+            return new Response<IEnumerable<ProductDto>>() { Message= "Successfully fetch products by query.", Data= await _productApiClient.GetAllProductsQuery(queryParam) };
         }
         [HttpGet("category/{category}")]
         public async Task<Response<IEnumerable<ProductDto>>> GetAllProductsByCategory(string category){
-            return new Response<IEnumerable<ProductDto>>() { Message= "Successfully fetch users by query.", Data= await _productApiClient.GetAllProductsByCategory(category) };
+            return new Response<IEnumerable<ProductDto>>() { Message= "Successfully fetch products by query.", Data= await _productApiClient.GetAllProductsByCategory(category) };
         }
         [HttpGet("{id}")]
         public async Task<Response<ProductDto>> GetProductById (int id){
-            return new Response<ProductDto>() { Message= "Successfully fetch user by id.", Data= await _productApiClient.GetProductById(id) };
+            return new Response<ProductDto>() { Message= "Successfully fetch product by id.", Data= await _productApiClient.GetProductById(id) };
         }
         [HttpPost]
         public async Task<Response<ProductDto>> CreateProduct ([FromBody] CreateProductDto createProductDto){
-            return new Response<ProductDto>() { Message= "Successfully created user.", Data= await _productApiClient.CreateProduct(createProductDto) };
+            return new Response<ProductDto>() { Message= "Successfully created product.", Data= await _productApiClient.CreateProduct(createProductDto) };
         }
         [HttpPut]
         public async Task<Response<ProductDto>> UpdateProduct ([FromBody] UpdateProductDto updateProductDto){
-            return new Response<ProductDto>() { Message= "Successfully updated user.", Data= await _productApiClient.UpdateProduct(updateProductDto) };
+            return new Response<ProductDto>() { Message= "Successfully updated product.", Data= await _productApiClient.UpdateProduct(updateProductDto) };
         }
         [HttpDelete("{id}")]
         public async Task<Response<ProductDto>> DeleteProductById (int id){
-            return new Response<ProductDto>() { Message= "Successfully deleted user.", Data= await _productApiClient.DeleteProductById(id) };
+            return new Response<ProductDto>() { Message= "Successfully deleted produtc.", Data= await _productApiClient.DeleteProductById(id) };
         }
     }
 }

@@ -17,27 +17,27 @@ namespace ASP.NET_CORE7_API_OAUTH2_RESOURCE.Controllers {
     
         [HttpGet]
         public async Task<Response<IEnumerable<CartDto>>> GetAllCartsQueryParam([FromQuery] QueryParamCart queryParam){
-            return new Response<IEnumerable<CartDto>>() { Message= "Successfully fetch users by query.", Data= await _cartApiClient.GetAllCartsQuery(queryParam) };
+            return new Response<IEnumerable<CartDto>>() { Message= "Successfully fetch carts by query.", Data= await _cartApiClient.GetAllCartsQuery(queryParam) };
         }
         [HttpGet("category/{userId}")]
         public async Task<Response<IEnumerable<CartDto>>> GetAllCartsByCategory(int userId){
-            return new Response<IEnumerable<CartDto>>() { Message= "Successfully fetch users by query.", Data= await _cartApiClient.GetAllCartsByUserId(userId) };
+            return new Response<IEnumerable<CartDto>>() { Message= "Successfully fetch carts by query.", Data= await _cartApiClient.GetAllCartsByUserId(userId) };
         }
         [HttpGet("{id}")]
         public async Task<Response<CartDto>> GetCartById (int id){
-            return new Response<CartDto>() { Message= "Successfully fetch user by id.", Data= await _cartApiClient.GetCartById(id) };
+            return new Response<CartDto>() { Message= "Successfully fetch cart by id.", Data= await _cartApiClient.GetCartById(id) };
         }
         [HttpPost]
         public async Task<Response<CartDto>> CreateCart ([FromBody] CreateCartDto createCartDto){
-            return new Response<CartDto>() { Message= "Successfully created user.", Data= await _cartApiClient.CreateCart(createCartDto) };
+            return new Response<CartDto>() { Message= "Successfully created cart.", Data= await _cartApiClient.CreateCart(createCartDto) };
         }
         [HttpPut]
         public async Task<Response<CartDto>> UpdateCart ([FromBody] UpdateCartDto updateCartDto){
-            return new Response<CartDto>() { Message= "Successfully updated user.", Data= await _cartApiClient.UpdateCart(updateCartDto) };
+            return new Response<CartDto>() { Message= "Successfully updated cart.", Data= await _cartApiClient.UpdateCart(updateCartDto) };
         }
         [HttpDelete("{id}")]
         public async Task<Response<CartDto>> DeleteCartById (int id){
-            return new Response<CartDto>() { Message= "Successfully deleted user.", Data= await _cartApiClient.DeleteCartById(id) };
+            return new Response<CartDto>() { Message= "Successfully deleted cart.", Data= await _cartApiClient.DeleteCartById(id) };
         }
     }
 }
