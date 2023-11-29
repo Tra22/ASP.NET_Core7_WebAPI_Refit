@@ -17,7 +17,7 @@ These instructions will get you to setup the project, install sdk and add packag
 1.  Install .net SDK 7<br>
 [Download .NET SDK here.](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 2.  Create new Web API's project<br>
-`dotnet new webapi –-name ASPNET_Core7_WebAPI_JWT`
+`dotnet new webapi –-name ASP.NET_Core7_WebAPI_Refit`
 3.  Add package
      - API-Versioning
        `dotnet add package Asp.Versioning.Mvc.ApiExplorer`
