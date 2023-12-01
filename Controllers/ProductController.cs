@@ -37,7 +37,7 @@ namespace ASP.NET_CORE7_API_OAUTH2_RESOURCE.Controllers {
         }
         [HttpDelete("{id}")]
         public async Task<Response<ProductDto>> DeleteProductById (int id){
-            return new Response<ProductDto>() { Message= "Successfully deleted produtc.", Data= await _productApiClient.DeleteProductById(id) };
+            return new Response<ProductDto>() { Message= "Successfully deleted product.", Data= await _productApiClient.DeleteProductById(id) };
         }
     }
 }
