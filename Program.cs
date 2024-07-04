@@ -1,5 +1,5 @@
 using Asp.Versioning;
-using ASP.NET_CORE7_API_OAUTH2_RESOURCE.Services;
+using ASP.NET_Core7_WebAPI_Refit.Services;
 using ASP.NET_Core7_WebAPI_Refit.Configurations.Swagger;
 using Microsoft.Extensions.Options;
 using Refit;

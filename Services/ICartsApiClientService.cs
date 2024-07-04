@@ -2,7 +2,7 @@ using ASP.NET_Core7_WebAPI_Refit.Dtos.Cart;
 using ASP.NET_Core7_WebAPI_Refit.Payloads.Requests.Cart;
 using Refit;
 
-namespace ASP.NET_CORE7_API_OAUTH2_RESOURCE.Services {
+namespace ASP.NET_Core7_WebAPI_Refit.Services {
     public interface ICartsApiClientService {
         [Get("/carts")]
         Task<IEnumerable<CartDto>> GetAllCartsQuery(QueryParamCart queryParam);

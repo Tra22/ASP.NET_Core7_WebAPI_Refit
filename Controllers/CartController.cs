@@ -1,11 +1,11 @@
 using Asp.Versioning;
-using ASP.NET_CORE7_API_OAUTH2_RESOURCE.Services;
+using ASP.NET_Core7_WebAPI_Refit.Services;
 using ASP.NET_Core7_WebAPI_Refit.Dtos.Cart;
 using ASP.NET_Core7_WebAPI_Refit.Payloads.Globals;
 using ASP.NET_Core7_WebAPI_Refit.Payloads.Requests.Cart;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ASP.NET_CORE7_API_OAUTH2_RESOURCE.Controllers {
+namespace ASP.NET_Core7_WebAPI_Refit.Controllers {
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]

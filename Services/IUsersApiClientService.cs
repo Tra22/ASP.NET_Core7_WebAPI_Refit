@@ -2,7 +2,7 @@ using ASP.NET_Core7_WebAPI_Refit.Dtos.User;
 using ASP.NET_Core7_WebAPI_Refit.Payloads.Requests;
 using Refit;
 
-namespace ASP.NET_CORE7_API_OAUTH2_RESOURCE.Services {
+namespace ASP.NET_Core7_WebAPI_Refit.Services {
     public interface IUsersApiClientService {
         [Get("/users")]
         Task<IEnumerable<UserDto>> GetAllUsersQuery(QueryParam queryParam);
